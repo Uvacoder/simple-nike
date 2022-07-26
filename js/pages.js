@@ -1,4 +1,4 @@
-// navbar -------- dont just this code Brother
+// navbar -------- dont touch this code Brother
 const ulNavbar = document.querySelector('.item2');
 const ulList = document.querySelector('.item2 ul');
 const openUl = document.querySelector('.ham');
