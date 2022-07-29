@@ -1,0 +1,342 @@
+@font-face {
+    font-family: "Nike Futura";
+    src: url('../Futura\ Condensed\ Extra\ Bold.otf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* ===== First Navbar ===== */
+#nav__1 {
+    width: 100%;
+    height: 36px;
+    padding: 0 36px;
+    background-color: #f2f2f2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav__1 ul {
+    list-style: none;
+    display: flex;
+    font-size: 13px;
+}
+
+#nav__1 ul a {
+    text-decoration: none;
+    border-left: 1px solid black;
+    padding: 0 1em;
+    color: black;
+}
+#nav__1 ul li:nth-child(1) a {
+    border-left: none;
+}
+#nav__1 ul a:hover {
+    color: #666;
+}
+
+
+/* ===== Second Navbar ===== */
+#nav__2 {
+    width: 100%;
+    height: 60px;
+    padding: 0 36px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    transition: .2s;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 9999;
+}
+
+#nav__2 ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav__2 ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+}
+#nav__2 ul a:hover {
+    border-bottom: 2px solid black;
+}
+
+#nav__2 .item3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5em;
+}
+#nav__2 .item3 a {
+    padding: .5em .5em .3em .5em;
+    border-radius: 50%;
+}
+#nav__2 .item3 a:hover {
+    background-color: #e3e3e3;
+}
+
+#nav__2 section {
+    display: none;
+}
+#nav__2 section div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+#nav__2 section p {
+    font-size: 20px;
+    color: #757575;
+    padding: 0 20px 0 16px;
+}
+
+#buttons {
+    padding: 0 16px;
+    display: flex;
+    gap: 1em;
+}
+#buttons button {
+    background-color: #111111;
+    color: white;
+    border-radius: 2em;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 2em 0;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#buttons button:hover {
+    background-color: #666;
+    border: 1px solid #666;
+}
+
+#buttons button:nth-child(2) {
+    background-color: white;
+    color: black;
+    border: 1px solid #e3e3e3;
+}
+#buttons button:nth-child(2):hover {
+    border: 1px solid black;
+}
+/* ==== Third Navbar ==== */
+#nav__3 {
+    width: 100%;
+    height: 44px;
+    background-color: #f2f2f2;
+}
+
+/* #nav__3 div {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1600px);
+    overflow: hidden;
+    z-index: -1;
+}
+
+#nav__3 div p {
+    vertical-align: baseline;
+    background-color: #f2f2f2;
+    text-align: center;
+    line-height: 44px;
+}
+
+#nav__3 .item1 {
+    animation: 8s card1 4s infinite;
+}
+@keyframes card1 {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    90% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+#nav__3 .item2 {
+    animation: 8s card1 4s infinite;
+}
+@keyframes card1 {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    90% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+#nav__3 .item3 {
+    animation: 8s card1 4s infinite;
+}
+@keyframes card1 {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    90% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} */
+
+
+
+
+
+.ham {
+    display: none;
+}
+.svgDisplay {
+    display: none;
+}
+.close {
+    display: none;
+}
+
+@media(max-width: 1114px) {
+    .hidden-xxl {
+        display: none;
+    }
+}
+@media(max-width: 1035px) {
+    .hidden-xl {
+        display: none;
+    }
+}
+@media(max-width: 980px) {
+    .hidden-lg {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 975px) {
+    .hidden-xxl, .hidden-xl, .hidden-lg {
+        display: block;
+    }
+    #nav__1 {
+        display: none;
+    }
+
+    #nav__2 {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px;
+    }
+    #nav__2 .item2 {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.288);
+        backdrop-filter: blur(3px);
+        overflow: hidden;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: .3s item2;
+
+        display: none;
+    }
+    @keyframes item2 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    #nav__2 ul {
+        width: 320px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: white;
+        padding: 1em;
+        transform: translateX(100%);
+        overflow: auto;
+        transition: .3s;
+    }
+    #nav__2 ul li {
+        width: 100%;
+    }
+    #nav__2 ul a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: .5em;
+        font-size: 24px;
+    }
+    #nav__2 ul a:hover {
+        border-bottom: none;
+    }
+    #nav__2 ul a:hover .svgDisplay {
+        transform: translateX(-20px);
+    }
+
+    #nav__2 section {
+        display: block;
+        padding: 0;
+    }
+
+    
+
+    .ham {
+        display: block;
+    }
+    .svgDisplay {
+        display: block;
+        transition: .3s;
+    }
+    .close {
+        display: block;
+    }
+}
