@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Nike Futura";
+    src: url('../Futura\ Condensed\ Extra\ Bold.otf');
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +11,6 @@
     font-family: sans-serif;
 }
 
-body {
-    height: 200vh;
-}
 
 /* ===== First Navbar ===== */
 #nav__1 {
@@ -50,9 +53,11 @@ body {
     top: 0;
     right: 0;
     transition: .2s;
+    background-color: white;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    z-index: 9999;
 }
 
 #nav__2 ul {
@@ -85,7 +90,56 @@ body {
     background-color: #e3e3e3;
 }
 
+#nav__2 section {
+    display: none;
+}
+#nav__2 section div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    margin-bottom: 4em;
+}
 
+#nav__2 section p {
+    font-size: 20px;
+    color: #757575;
+    padding: 0 20px 0 16px;
+}
+
+#buttons {
+    padding: 0 16px;
+    display: flex;
+    gap: 1em;
+}
+#buttons button {
+    background-color: #111111;
+    color: white;
+    border-radius: 2em;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 2em 0;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#buttons button:hover {
+    background-color: #666;
+    border: 1px solid #666;
+}
+
+#buttons button:nth-child(2) {
+    background-color: white;
+    color: black;
+    border: 1px solid #e3e3e3;
+}
+#buttons button:nth-child(2):hover {
+    border: 1px solid black;
+}
+/* ==== Third Navbar ==== */
+#nav__3 {
+    width: 100%;
+    height: 44px;
+    background-color: #f2f2f2;
+}
 
 .ham {
     display: none;
@@ -100,7 +154,6 @@ body {
 @media(max-width: 1114px) {
     .hidden-xxl {
         display: none;
-        color: red;
     }
 }
 @media(max-width: 1035px) {
@@ -163,6 +216,7 @@ body {
         background-color: white;
         padding: 1em;
         transform: translateX(100%);
+        overflow: auto;
         transition: .3s;
     }
     #nav__2 ul li {
@@ -171,6 +225,7 @@ body {
     #nav__2 ul a {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         padding: .5em;
         font-size: 24px;
@@ -181,6 +236,13 @@ body {
     #nav__2 ul a:hover .svgDisplay {
         transform: translateX(-20px);
     }
+
+    #nav__2 section {
+        display: block;
+        padding: 0;
+    }
+
+    
 
     .ham {
         display: block;
